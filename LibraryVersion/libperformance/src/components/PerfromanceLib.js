@@ -21,13 +21,13 @@ export function initPerformanceObject() {
 		supplierId = id;
 	};
 
-	const pageLoadTime = (performance) => {
+	const pageLoadTime = () => {
 		//console.log('This is a test');
 		console.log('Application name ', applicationName);
-		console.log('Date Now' + Date.now());
-		console.log('Performance ', performance);
-		console.log('Load Event End ' + performance?.timing['loadEventEnd']);
-		console.log(Date.now() - performance?.timing['loadEventEnd']);
+		//console.log('Date Now' + Date.now());
+		//console.log('Performance ', performance);
+		//console.log('Load Event End ' + performance?.timing['loadEventEnd']);
+		console.log(Date.now() - window?.performance?.timing['loadEventEnd']);
 	};
 
 	const apiStart = (name) => {
